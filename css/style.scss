@@ -1,0 +1,280 @@
+@import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --gren: #76B900;
+    --dark: #262626;
+    --text: #707070;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+p {
+    line-height: 1.4;
+    color: var(--text);
+}
+
+img {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.wrapper {
+    padding: 0 6%;
+}
+
+.btn-green {
+    background: #76B900;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    border-radius: .5rem;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.brand {
+    width: 12rem;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+
+    .text {
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.home-row- {
+    &1 {
+        background: rgba(117, 185, 0, 0.04);
+        padding: 2rem 0;
+        border-radius: 1rem;
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    &2 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .blog-item {
+            .title-blog {
+                font-weight: bold;
+                margin: 1rem 0;
+            }
+
+            .btn-green {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "big-image big-image small-1 small-2"
+        "big-image big-image small-3 small-4";
+    height: 70vh;
+    margin-top: 2rem;
+
+    &-image {
+        border-radius: 1rem;
+    }
+
+}
+
+.big-image {
+    grid-area: big-image;
+    background: url(https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+}
+
+.small-1 {
+    grid-area: small-1;
+    background: url(https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+}
+
+.small-2 {
+    grid-area: small-2;
+    background: url(https://images.unsplash.com/photo-1581094651181-35942459ef62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+}
+
+.small-3 {
+    grid-area: small-3;
+    background: url(https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80);
+    background-size: cover;
+}
+
+.small-4 {
+    grid-area: small-4;
+    background: url(https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+}
+
+
+.row-products {
+    display: grid;
+    grid-template-columns: 45% auto;
+    height: 80vh;
+
+    .image {
+        background: url(../img/image_productos.png)top right/cover;
+        border-radius: 1rem;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        margin-top: 5rem;
+        padding-right: 5rem;
+
+        li {
+            display: grid;
+            grid-template-columns: 20% auto;
+            align-items: center;
+
+            h2 {
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &-2 {
+        margin-top: 4rem;
+
+        .text {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+
+            h3 {
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+}
+
+.main-usted {
+    display: block;
+
+    .text {
+        display: grid;
+        grid-template-columns: 30% auto;
+        align-items: center;
+
+        .btn-green {
+            width: fit-content;
+        }
+    }
+
+    .img {
+        margin-top: 2rem;
+    }
+}
+
+
+.usted-row- {
+    &1 {
+        margin-top: 3rem;
+
+        h2 {
+            text-align: left;
+        }
+    }
+
+    &2 {
+        background: url(../img/nvidia_studio_bottom.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        margin-top: 3rem;
+
+        .text {
+            max-width: 500px;
+
+            h2 {
+                font-size: 2rem;
+                color: var(--gren);
+                font-weight: bold;
+            }
+
+            p {
+                color: #fff;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
